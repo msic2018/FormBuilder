@@ -1,0 +1,51 @@
+
+<div class="container">
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <div>
+            <h1> Form Builder </h1>
+            <div ng-if="form.length" ng-show="show">{{form}}</div>
+            <button class="btn btn-primary" ng-click="show = !show" ng-show="!show">Add Input</button>
+            <form id="myForm">
+                <div class="container">
+                    <div class="row">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel panel-default" ng-show="show">
+
+                            <select class="form-control pull-left" name="condition" style="width:100px;" ng-model="form.condition">
+                                <option></option>
+                                <option>Equals</option>
+                                <option>Greater than</option>
+                                <option>Less than</option>
+                            </select>
+                            
+                            <input name="answer" type="text" class="form-control pull-right" style="width:200px;" ng-model="form.answer">
+                            <br><br><br>
+                            <input name="ques" type="text" class="form-control" style="width:300px;" ng-model="form.question">
+                            <br>
+                            
+                            <select class="form-control" name="type" style="width:300px;" ng-model="form.type">
+                                <option></option>
+                                <option>YES/NO</option>
+                                <option>TEXT</option>
+                                <option>NUMBER</option>
+                            </select>
+                            <br>
+
+
+                            <button ng-click="clearForm()" class="pull-right" style="margin-left: 10px">Delete</button>
+                            <button ng-click="createForm()" class="pull-right">Add Sub-Input</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+</div>
